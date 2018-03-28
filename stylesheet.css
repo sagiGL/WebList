@@ -60,7 +60,6 @@ footer {
 }
 @media (max-width: 899px){
     .block {
-        font-size:2em;
         width: 80%;
         padding-left: 20px;
     }
