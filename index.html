@@ -2,17 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <title>Web List</title>
 </head>
 <body>
-    <header class="header" style="background: gray;color: white;width:100%;">
-        <h1>Web List Project - Sagi Gleizer</h1>
+    <header>
+        <h1>Web List</h1>
     </header>
-    <div>
-        <input type="text">
-        <button>LOAD TO LIST</button>
+    <div class="block">
+        <input type='text' id='user_input' />
+        <input type='button' value='add to list' id='add' />
+        <ul id='list'></ul>
     </div>
-    <dive class="ItemList" id="ListBox" style="background: gray;color: white">
-    </dive>
+    <footer>
+        <p>Made By Sagi Gleizer </p>
+    </footer>
+    <script>
+        document.getElementById('add').onclick = function(){
+            var text = document.getElementById("user_input").value;
+            var node = document.createElement("li");
+            var textNode = document.createTextNode(text);
+            node.appendChild(textNode);
+            document.getElementById('list').appendChild(node);
+        };
+    </script>
 </body>
 </html>
