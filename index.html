@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script  src="./script.js" ></script>
     <title>Web List</title>
 </head>
 <body>
     <header>
-        <h1>Web List1</h1>
+        <h1>web list</h1>
     </header>
     <div class="block">
         <input type='text' id='user_input' />
@@ -18,14 +19,5 @@
     <footer>
         <p>Made By Sagi Gleizer </p>
     </footer>
-    <script>
-        document.getElementById('add').onclick = function(){
-            var text = document.getElementById("user_input").value;
-            var node = document.createElement("li");
-            var textNode = document.createTextNode(text);
-            node.appendChild(textNode);
-            document.getElementById('list').appendChild(node);
-        };
-    </script>
 </body>
 </html>
