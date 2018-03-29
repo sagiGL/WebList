@@ -36,6 +36,10 @@ li{
     margin: 5px;
     overflow: hidden;
 }
+li:hover{
+    background: lightskyblue;
+    color: black;
+}
 header {
     text-align: center;
 }
@@ -62,12 +66,13 @@ footer {
     .block {
         width: 80%;
         padding-left: 20px;
+        min-font-size:30px;
     }
 }
 @media only screen and (max-width: 320px) {
 
     body {
-        font-size: 2em;
+        font-size: 6em;
     }
 
 }

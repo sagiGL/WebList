@@ -1,15 +1,29 @@
+let listCounter = 0;
 
 window.onload = function() {
     document.getElementById('add').addEventListener("click", addListItem);
     document.getElementById('sort').addEventListener("click", sortList);
+
 }
 
 function addListItem(){
     let text = document.getElementById("user_input").value;
     let node = document.createElement("li");
     let textNode = document.createTextNode(text);
+    let xBtn = document.createElement("button");
+    let t = document.createTextNode("X");      // Create a text node
+
+    //xBtn.style.alignContent="center";
     node.appendChild(textNode);
+    //xBtn.appendChild(t);
+    //node.appendChild(xBtn);
     document.getElementById('list').appendChild(node);
+    node.setAttribute("class","listItem");
+    node.setAttribute("id",listCounter + 1);
+    listCounter++;
+    node.addEventListener("click", function(event) {
+        node.parentNode.removeChild(node);
+    });
 }
 
 function sortList() {
